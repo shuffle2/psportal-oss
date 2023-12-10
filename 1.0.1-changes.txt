@@ -12,6 +12,10 @@ A, M, D mean:
 ========================================================================
 
 project_path: target/kernel_platform/common
+Mon Aug 14 09:58:05 2023 +0800
+M	sound/core/info.c
+
+
 Thu Apr 27 23:40:03 2023 +0800
 M	drivers/tty/serial/qcom_geni_serial.c
 

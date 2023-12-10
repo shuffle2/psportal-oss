@@ -2,6 +2,7 @@
 /*
  *  Information interface for ALSA driver
  *  Copyright (c) by Jaroslav Kysela <perex@perex.cz>
+ *  Copyright (c) 2023 Sony Interactive Entertainment Inc.
  */
 
 #include <linux/init.h>
@@ -369,7 +370,15 @@ static int snd_info_text_entry_open(struct inode *inode, struct file *file)
 	struct snd_info_private_data *data;
 	int err;
 
-	mutex_lock(&info_mutex);
+	if (!mutex_trylock(&info_mutex)){
+		if ((file != NULL) && (file->f_path.dentry != NULL)) {
+			printk(KERN_WARNING "%s: %s mutex_trylock EAGAIN\n", __func__,
+                               file->f_path.dentry->d_iname);
+		} else {
+			printk(KERN_WARNING "%s: mutex_trylock EAGAIN\n", __func__);
+		}
+		return -EAGAIN;
+	}
 	err = alloc_info_private(entry, &data);
 	if (err < 0)
 		goto unlock;
