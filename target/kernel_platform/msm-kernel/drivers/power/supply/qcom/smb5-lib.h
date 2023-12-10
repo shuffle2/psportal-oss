@@ -604,6 +604,7 @@ struct smb_charger {
 	bool			qc3p5_detected;
 	int			qc3p5_detected_mw;
 	bool			disable_suspend_on_collapse;
+	bool			sdp_online_lock;
 
 	/* workaround flag */
 	int		real_charger_type;

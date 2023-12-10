@@ -591,7 +591,13 @@ static void usb_audio_make_longname(struct usb_device *dev,
 		break;
 	}
 }
-
+//code for 975 added by zhaochengliang at 2023-06-27 start
+#define USB_VENDOR_ID_SONY                   0x054C
+#define USB_PRODUCT_ID_WIRELESS_CONTROLLER  0x0CE6
+#define USB_PRODUCT_ID_WIRELESS_ADAPTER      0x0ECC
+#define CARD_ADDR_WIRELESS_CONTROLLER       3
+#define CARD_ADDR_WIRELESS_ADAPTER           4
+//code for 975 added by zhaochengliang at 2023-06-27 end
 /*
  * create a chip instance and set its names.
  */
@@ -603,7 +609,9 @@ static int snd_usb_audio_create(struct usb_interface *intf,
 {
 	struct snd_card *card;
 	struct snd_usb_audio *chip;
-	int err;
+//code for 975 added by zhaochengliang at 2023-06-27 start
+	int err = -1;
+//code for 975 added by zhaochengliang at 2023-06-27 end
 	char component[14];
 
 	*rchip = NULL;
@@ -620,14 +628,31 @@ static int snd_usb_audio_create(struct usb_interface *intf,
 		dev_err(&dev->dev, "unknown device speed %d\n", snd_usb_get_speed(dev));
 		return -ENXIO;
 	}
-
-	err = snd_card_new(&intf->dev, index[idx], id[idx], THIS_MODULE,
-			   sizeof(*chip), &card);
-	if (err < 0) {
-		dev_err(&dev->dev, "cannot create card instance %d\n", idx);
-		return err;
+//code for 975 added by zhaochengliang at 2023-06-27 start
+	if (usb_id == USB_ID(USB_VENDOR_ID_SONY, USB_PRODUCT_ID_WIRELESS_CONTROLLER)) {
+		err = snd_card_new(&intf->dev, CARD_ADDR_WIRELESS_CONTROLLER, id[idx], THIS_MODULE,
+			sizeof(*chip), &card);
+		if (err < 0) {
+			dev_err(&dev->dev, "usb_id 0x%x err %d\n", usb_id, err);
+		}
 	}
-
+	if (usb_id == USB_ID(USB_VENDOR_ID_SONY, USB_PRODUCT_ID_WIRELESS_ADAPTER)) {
+		err = snd_card_new(&intf->dev, CARD_ADDR_WIRELESS_ADAPTER, id[idx], THIS_MODULE,
+			sizeof(*chip), &card);
+		if (err < 0) {
+			dev_err(&dev->dev, "usb_id 0x%x err %d\n", usb_id, err);
+		}
+	}
+	if (err < 0) {
+		err = snd_card_new(&intf->dev, index[idx], id[idx], THIS_MODULE,
+				   sizeof(*chip), &card);
+		if (err < 0) {
+			dev_err(&dev->dev, "cannot create card instance %d\n", idx);
+			return err;
+		}
+	}
+	dev_info(&dev->dev, "usb_id 0x%x card addr %d\n", usb_id, card->number);
+//code for 975 added by zhaochengliang at 2023-06-27 end
 	chip = card->private_data;
 	mutex_init(&chip->mutex);
 	init_waitqueue_head(&chip->shutdown_wait);

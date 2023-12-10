@@ -721,7 +721,8 @@ void wcd_mbhc_report_plug(struct wcd_mbhc *mbhc, int insertion,
 		if (mbhc->impedance_detect &&
 			mbhc->mbhc_cb->compute_impedance &&
 			(mbhc->mbhc_cfg->linein_th != 0) &&
-			(!is_pa_on)) {
+			(!is_pa_on) &&
+			!mbhc->gnd_mic_swaped) {
 			/* Set MUX_CTL to AUTO for Z-det */
 			WCD_MBHC_REG_READ(WCD_MBHC_FSM_EN, fsm_en);
 			WCD_MBHC_REG_UPDATE_BITS(WCD_MBHC_FSM_EN, 0);
@@ -859,7 +860,11 @@ void wcd_mbhc_find_plug_and_report(struct wcd_mbhc *mbhc,
 		pr_debug("%s: cable already reported, exit\n", __func__);
 		goto exit;
 	}
-
+	if (plug_type == MBHC_PLUG_TYPE_GND_MIC_SWAP) {
+		mbhc->gnd_mic_swaped = true;
+	} else {
+		mbhc->gnd_mic_swaped = false;
+	}
 	if (plug_type == MBHC_PLUG_TYPE_HEADPHONE) {
 		/*
 		 * Nothing was reported previously
@@ -869,19 +874,12 @@ void wcd_mbhc_find_plug_and_report(struct wcd_mbhc *mbhc,
 		ret = extcon_set_state_sync(mbhc->extdev, EXTCON_JACK_HEADPHONE, 1);
 	} else if (plug_type == MBHC_PLUG_TYPE_GND_MIC_SWAP) {
 		if (mbhc->current_plug == MBHC_PLUG_TYPE_HEADPHONE) {
-			wcd_mbhc_report_plug(mbhc, 0, SND_JACK_HEADPHONE);
-			ret = extcon_set_state_sync(mbhc->extdev, EXTCON_JACK_HEADPHONE, 0);
+			goto exit;
 		}
 		if (mbhc->current_plug == MBHC_PLUG_TYPE_HEADSET) {
 			wcd_mbhc_report_plug(mbhc, 0, SND_JACK_HEADSET);
-			ret = extcon_set_state_sync(mbhc->extdev, EXTCON_JACK_MICROPHONE, 0);
 		}
-#if IS_ENABLED(CONFIG_AUDIO_QGKI)
-		wcd_mbhc_report_plug(mbhc, 1, SND_JACK_UNSUPPORTED);
-#endif /* CONFIG_AUDIO_QGKI */
-		 if (mbhc->current_plug == MBHC_PLUG_TYPE_NONE)
-			mbhc->current_plug = MBHC_PLUG_TYPE_GND_MIC_SWAP;
-		ret = extcon_set_state_sync(mbhc->extdev, EXTCON_MECHANICAL, 1);
+		wcd_mbhc_report_plug(mbhc, 1, SND_JACK_HEADPHONE);
 	} else if (plug_type == MBHC_PLUG_TYPE_HEADSET) {
 		if (mbhc->mbhc_cfg->enable_anc_mic_detect &&
 		    mbhc->mbhc_fn->wcd_mbhc_detect_anc_plug_type)
@@ -1117,6 +1115,7 @@ static void wcd_mbhc_swch_irq_handler(struct wcd_mbhc *mbhc)
 				mbhc->mbhc_cb->mbhc_moisture_detect_en(mbhc,
 									false);
 		}
+		mbhc->gnd_mic_swaped = false;
 
 	} else if (!detection_type) {
 		/* Disable external voltage source to micbias if present */
@@ -1888,7 +1887,7 @@ int wcd_mbhc_init(struct wcd_mbhc *mbhc, struct snd_soc_component *component,
 	mbhc->swap_thr = GND_MIC_SWAP_THRESHOLD;
 	mbhc->hphl_cross_conn_thr = HPHL_CROSS_CONN_THRESHOLD;
 	mbhc->hphr_cross_conn_thr = HPHR_CROSS_CONN_THRESHOLD;
-
+	mbhc->gnd_mic_swaped = false;
 	if (mbhc->intr_ids == NULL) {
 		pr_err("%s: Interrupt mapping not provided\n", __func__);
 		return -EINVAL;

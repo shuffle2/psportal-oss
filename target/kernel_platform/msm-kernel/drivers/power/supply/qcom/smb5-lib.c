@@ -2253,6 +2253,11 @@ int smblib_get_prop_batt_status(struct smb_charger *chg,
 		return 0;
 	}
 
+	if (chg->sdp_online_lock) {
+		val->intval = POWER_SUPPLY_STATUS_CHARGING;
+		return 0;
+	}
+
 	/*
 	 * If charge termination WA is active and has suspended charging, then
 	 * continue reporting charging status as FULL.
@@ -2923,6 +2928,7 @@ static int smblib_set_chg_temp_regulation(struct smb_charger *chg, bool enable)
 	}
 	else if (!enable) {
 		status_chg = false;
+		chg->sdp_online_lock = false;
 	}
 
 	g_count = 0;
@@ -3108,6 +3114,8 @@ static int smblib_process_thermal_readings(struct smb_charger *chg)
 	} else if ((g_count == 3) && status_chg) {
 		g_count++;
 		vote(chg->usb_icl_votable, "USER_TEST", false,  0);
+	} else {
+		chg->sdp_online_lock = false;
 	}
 
 #if OPEN_CHARGER_USER_LOG
@@ -3591,6 +3599,11 @@ int smblib_get_prop_usb_online(struct smb_charger *chg,
 
 	val->intval = (stat & USE_USBIN_BIT) &&
 		      (stat & VALID_INPUT_POWER_SOURCE_STS_BIT);
+
+	if (chg->sdp_online_lock) {
+		val->intval = (stat & USE_USBIN_BIT);
+	}
+
 	return rc;
 }
 
@@ -6154,12 +6167,13 @@ static void update_sw_icl_max(struct smb_charger *chg, int val)
 		extcon_get_charge_mode(false);
 		pr_err("Current usb mode is USB/USB_CDP!!!\n");
 		if (g_count < 3) {
-                	if (val == POWER_SUPPLY_TYPE_USB) {
-                        	vote(chg->usb_icl_votable, "USER_TEST", true,  50);
-                        } else {
-                        	vote(chg->usb_icl_votable, "USER_TEST", true,  50000);
-                        }
-                }
+			if (val == POWER_SUPPLY_TYPE_USB) {
+                		vote(chg->usb_icl_votable, "USER_TEST", true,  50);
+				chg->sdp_online_lock = true;
+            		} else {
+                		vote(chg->usb_icl_votable, "USER_TEST", true,  50000);
+            		}
+		}
 	} else {
 		extcon_get_charge_mode(true);
 		pr_err("Current usb mode is NONE/CHARGEING!!!\n");
@@ -8841,6 +8855,7 @@ int smblib_init(struct smb_charger *chg)
 		return -ENODEV;
 	}
 
+	chg->sdp_online_lock = false;
 	chg->fake_capacity = -EINVAL;
 	chg->fake_input_current_limited = -EINVAL;
 	chg->fake_batt_status = -EINVAL;

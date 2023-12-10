@@ -100,7 +100,6 @@ struct ps_led_info {
 #define DS_BUTTONS1_L3		BIT(6)
 #define DS_BUTTONS1_R3		BIT(7)
 #define DS_BUTTONS2_PS_HOME	BIT(0)
-#define DS_BUTTONS2_TOUCHPAD	BIT(1)
 #define DS_BUTTONS2_MIC_MUTE	BIT(2)
 
 /* Status field of DualSense input report. */
@@ -138,14 +137,11 @@ struct ps_led_info {
 #define DS_ACC_RANGE		(4*DS_ACC_RES_PER_G)
 #define DS_GYRO_RES_PER_DEG_S	1024
 #define DS_GYRO_RANGE		(2048*DS_GYRO_RES_PER_DEG_S)
-#define DS_TOUCHPAD_WIDTH	1920
-#define DS_TOUCHPAD_HEIGHT	1080
 
 struct dualsense {
 	struct ps_device base;
 	struct input_dev *gamepad;
 	struct input_dev *sensors;
-	struct input_dev *touchpad;
 
 	/* Update version is used as a feature/capability version. */
 	uint16_t update_version;
@@ -652,34 +648,6 @@ static struct input_dev *ps_sensors_create(struct hid_device *hdev, int accel_ra
 	return sensors;
 }
 
-static struct input_dev *ps_touchpad_create(struct hid_device *hdev, int width, int height,
-		unsigned int num_contacts)
-{
-	struct input_dev *touchpad;
-	int ret;
-
-	touchpad = ps_allocate_input_dev(hdev, "Touchpad");
-	if (IS_ERR(touchpad))
-		return ERR_CAST(touchpad);
-
-	/* Map button underneath touchpad to BTN_LEFT. */
-	input_set_capability(touchpad, EV_KEY, BTN_LEFT);
-	__set_bit(INPUT_PROP_BUTTONPAD, touchpad->propbit);
-
-	input_set_abs_params(touchpad, ABS_MT_POSITION_X, 0, width - 1, 0, 0);
-	input_set_abs_params(touchpad, ABS_MT_POSITION_Y, 0, height - 1, 0, 0);
-
-	ret = input_mt_init_slots(touchpad, num_contacts, INPUT_MT_POINTER);
-	if (ret)
-		return ERR_PTR(ret);
-
-	ret = input_register_device(touchpad);
-	if (ret)
-		return ERR_PTR(ret);
-
-	return touchpad;
-}
-
 static ssize_t firmware_version_show(struct device *dev,
 				struct device_attribute
 				*attr, char *buf)
@@ -1142,25 +1110,6 @@ static int dualsense_parse_report(struct ps_device *ps_dev, struct hid_report *r
 	input_event(ds->sensors, EV_MSC, MSC_TIMESTAMP, ds->sensor_timestamp_us);
 	input_sync(ds->sensors);
 
-	for (i = 0; i < ARRAY_SIZE(ds_report->points); i++) {
-		struct dualsense_touch_point *point = &ds_report->points[i];
-		bool active = (point->contact & DS_TOUCH_POINT_INACTIVE) ? false : true;
-
-		input_mt_slot(ds->touchpad, i);
-		input_mt_report_slot_state(ds->touchpad, MT_TOOL_FINGER, active);
-
-		if (active) {
-			int x = (point->x_hi << 8) | point->x_lo;
-			int y = (point->y_hi << 4) | point->y_lo;
-
-			input_report_abs(ds->touchpad, ABS_MT_POSITION_X, x);
-			input_report_abs(ds->touchpad, ABS_MT_POSITION_Y, y);
-		}
-	}
-	input_mt_sync_frame(ds->touchpad);
-	input_report_key(ds->touchpad, BTN_LEFT, ds_report->buttons[2] & DS_BUTTONS2_TOUCHPAD);
-	input_sync(ds->touchpad);
-
 	battery_data = ds_report->status & DS_STATUS_BATTERY_CAPACITY;
 	charging_status = (ds_report->status & DS_STATUS_CHARGING) >> DS_STATUS_CHARGING_SHIFT;
 
@@ -1387,12 +1336,6 @@ static struct ps_device *dualsense_create(struct hid_device *hdev)
 			DS_GYRO_RANGE, DS_GYRO_RES_PER_DEG_S);
 	if (IS_ERR(ds->sensors)) {
 		ret = PTR_ERR(ds->sensors);
-		goto err;
-	}
-
-	ds->touchpad = ps_touchpad_create(hdev, DS_TOUCHPAD_WIDTH, DS_TOUCHPAD_HEIGHT, 2);
-	if (IS_ERR(ds->touchpad)) {
-		ret = PTR_ERR(ds->touchpad);
 		goto err;
 	}
 

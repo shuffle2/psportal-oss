@@ -1,0 +1,1125 @@
+========================================================================
+Copyright (C) 2023 Sony Interactive Entertainment Inc.
+
+The following list shows change modified by Sony Interactive Entertainment Inc.
+
+NOTE:
+A, M, D mean:
+  A: Added
+  M: Modified
+  D: Deleted
+  For other options: see "--diff-filter" in https://git-scm.com/docs/git-log
+========================================================================
+
+project_path: target/kernel_platform/common
+Mon Aug 14 09:58:05 2023 +0800
+M	sound/core/info.c
+
+
+Tue Jul 11 19:22:41 2023 +0800
+M	drivers/android/binder.c
+
+
+Thu Jul 6 19:37:59 2023 +0800
+M	android/abi_gki_aarch64.xml
+M	drivers/hid/hid-bigbenff.c
+M	include/linux/rmap.h
+M	mm/rmap.c
+
+
+Sat Jun 17 15:32:53 2023 +0800
+M	sound/usb/card.c
+
+
+Tue May 30 16:23:46 2023 +0800
+M	drivers/hid/hid-playstation.c
+
+
+Thu Apr 27 23:40:03 2023 +0800
+M	drivers/tty/serial/qcom_geni_serial.c
+
+
+Tue Apr 25 09:27:42 2023 +0800
+M	drivers/usb/core/generic.c
+
+
+Mon Apr 24 16:31:10 2023 +0800
+M	drivers/usb/core/generic.c
+
+
+Mon Apr 17 14:42:57 2023 +0800
+M	arch/arm64/include/asm/efi.h
+M	arch/arm64/kernel/efi-rt-wrapper.S
+M	arch/arm64/kernel/efi.c
+
+
+Tue Apr 4 17:34:31 2023 +0800
+M	drivers/hid/hid-playstation.c
+
+
+Thu Mar 9 21:10:55 2023 +0800
+M	drivers/hid/hid-playstation.c
+
+
+Thu Feb 16 15:11:40 2023 +0800
+M	drivers/hid/hidraw.c
+M	drivers/usb/core/hub.c
+M	drivers/usb/core/notify.c
+M	drivers/usb/core/usb.h
+M	include/linux/usb.h
+
+
+Tue Jan 17 19:02:53 2023 +0800
+M	drivers/usb/core/config.c
+
+
+Thu Dec 15 19:58:23 2022 +0800
+M	drivers/hid/hid-playstation.c
+
+
+Mon Nov 21 19:41:22 2022 +0800
+M	drivers/hid/hid-playstation.c
+
+
+Sat Nov 19 17:17:14 2022 +0800
+M	drivers/mmc/core/mmc.c
+M	include/linux/mmc/card.h
+M	include/linux/mmc/mmc.h
+
+
+Fri Oct 21 15:10:58 2022 +0800
+MM	drivers/usb/core/hub.c
+
+
+Mon Oct 17 14:16:53 2022 +0800
+M	drivers/usb/core/hub.c
+
+
+Fri Oct 14 17:54:12 2022 +0800
+M	kernel/printk/printk.c
+
+
+Sun Oct 9 22:34:45 2022 +0800
+M	drivers/usb/core/hub.c
+
+
+Sun Oct 9 22:14:25 2022 +0800
+M	drivers/usb/core/hub.c
+
+
+Thu Sep 22 09:49:59 2022 +0800
+M	drivers/hid/hid-playstation.c
+M	drivers/hid/hidraw.c
+
+
+Mon Sep 19 22:34:35 2022 +0800
+M	drivers/usb/core/hub.c
+
+
+===========================================================================
+project_path: target/kernel_platform/msm-kernel
+Tue Jul 11 19:27:35 2023 +0800
+M	drivers/android/binder.c
+
+
+Thu Jul 6 19:58:39 2023 +0800
+M	android/abi_gki_aarch64.xml
+M	drivers/hid/hid-bigbenff.c
+M	include/linux/rmap.h
+M	mm/rmap.c
+
+
+Mon Jul 17 14:50:16 2023 +0800
+M	drivers/power/supply/qcom/smb5-lib.c
+M	drivers/power/supply/qcom/smb5-lib.h
+
+
+Fri Jun 2 09:31:45 2023 +0800
+M	drivers/power/supply/qcom/smb5-lib.c
+
+
+Sat Jun 3 15:55:10 2023 +0800
+M	drivers/power/supply/qcom/smb5-lib.c
+
+
+Thu Apr 27 11:51:35 2023 +0800
+M	drivers/misc/hqhardwareinfo/extcon-hub-gpio.c
+
+
+Thu May 18 20:38:17 2023 +0800
+M	drivers/power/supply/qcom/smb5-lib.c
+
+
+Mon Apr 17 19:59:29 2023 +0800
+MM	drivers/misc/hqhardwareinfo/extcon-hub-gpio.c
+MM	drivers/power/supply/qcom/smb5-lib.c
+
+
+Thu Mar 30 16:09:11 2023 +0800
+M	drivers/misc/hqhardwareinfo/extcon-hub-gpio.c
+
+
+Mon May 8 10:00:37 2023 +0800
+M	drivers/power/supply/qcom/smb5-lib.c
+
+
+Mon Mar 27 11:21:45 2023 +0800
+M	drivers/input/touchscreen/focaltech_touch/focaltech_core.c
+
+
+Thu Mar 30 15:26:05 2023 +0800
+M	drivers/misc/sx937x/sx937x_sar.c
+
+
+Thu Mar 30 12:25:18 2023 +0800
+M	drivers/misc/hqhardwareinfo/hardware_info.c
+
+
+Thu Apr 13 18:37:53 2023 +0800
+M	drivers/misc/hqhardwareinfo/extcon-hub-gpio.c
+M	drivers/power/supply/qcom/smb5-lib.c
+
+
+Tue Apr 11 21:26:42 2023 +0800
+M	drivers/misc/hqhardwareinfo/hardware_info.c
+
+
+Thu Apr 27 20:45:58 2023 +0800
+M	drivers/iio/adc/qcom-vadc-common.c
+M	drivers/power/supply/qcom/smb5-lib.c
+
+
+Tue Mar 21 09:39:06 2023 +0800
+M	drivers/usb/pd/policy_engine.c
+M	drivers/usb/pd/qpnp-pdphy.c
+
+
+Thu Mar 30 17:11:55 2023 +0800
+M	drivers/input/touchscreen/focaltech_touch/focaltech_config.h
+A	drivers/input/touchscreen/focaltech_touch/include/firmware/FT8201AB_V0A_D00_BOE_7P95_MODULE_LONG_V_MODE_20230329_all.bin
+A	drivers/input/touchscreen/focaltech_touch/include/firmware/FT8201AB_V0A_D00_BOE_7P95_MODULE_LONG_V_MODE_20230329_all.i
+A	drivers/input/touchscreen/focaltech_touch/include/firmware/FT8201AB_V0A_D00_BOE_7P95_MODULE_LONG_V_MODE_20230329_app.bin
+A	drivers/input/touchscreen/focaltech_touch/include/firmware/FT8201AB_V0A_D00_BOE_7P95_MODULE_LONG_V_MODE_20230329_app.i
+
+
+Wed Mar 29 23:30:46 2023 +0800
+MM	drivers/power/supply/qcom/smb5-lib.c
+
+
+Wed Mar 29 21:07:58 2023 +0800
+M	drivers/power/supply/qcom/qpnp-smb5.c
+M	drivers/power/supply/qcom/smb5-lib.c
+M	drivers/usb/pd/policy_engine.c
+
+
+Wed Mar 29 21:03:47 2023 +0800
+M	drivers/iio/adc/qcom-vadc-common.c
+M	drivers/power/supply/qcom/smb5-lib.c
+
+
+Wed Mar 22 17:22:33 2023 +0800
+M	drivers/iio/adc/qcom-vadc-common.c
+M	drivers/power/supply/qcom/smb5-lib.c
+
+
+Mon Mar 20 09:19:13 2023 +0800
+M	drivers/power/supply/qcom/qpnp-smb5.c
+M	drivers/power/supply/qcom/smb5-lib.c
+M	drivers/usb/pd/policy_engine.c
+
+
+Sun Jan 29 18:29:09 2023 +0800
+M	drivers/power/supply/qcom/qpnp-smb5.c
+M	drivers/power/supply/qcom/smb5-lib.c
+M	drivers/usb/pd/policy_engine.c
+
+
+Mon Feb 27 16:59:37 2023 +0800
+M	drivers/clk/qcom/gcc-khaje.c
+
+
+Tue Mar 7 15:41:32 2023 +0800
+M	drivers/misc/hqhardwareinfo/extcon-hub-gpio.c
+
+
+Mon Mar 27 19:35:02 2023 +0800
+M	drivers/power/supply/qcom/smb5-lib.c
+M	drivers/power/supply/qcom/smb5-lib.h
+
+
+Sat Mar 4 18:43:05 2023 +0800
+M	drivers/misc/hqhardwareinfo/hardware_info.c
+
+
+Mon Feb 27 20:51:01 2023 +0800
+M	drivers/misc/sx937x/sx937x.h
+M	drivers/misc/sx937x/sx937x_sar.c
+M	drivers/power/supply/qcom/smb5-lib.c
+
+
+Thu Feb 23 18:25:16 2023 +0800
+M	drivers/power/supply/qcom/qg-soc.c
+M	drivers/power/supply/qcom/qpnp-qg.c
+
+
+Thu Feb 16 15:00:23 2023 +0800
+M	drivers/hid/hidraw.c
+M	drivers/misc/hqhardwareinfo/extcon-hub-gpio.c
+M	drivers/usb/core/hub.c
+M	drivers/usb/core/notify.c
+M	drivers/usb/core/usb.h
+M	drivers/usb/dwc3/dwc3-msm-core.c
+M	include/linux/usb.h
+
+
+Mon Mar 20 15:45:18 2023 +0800
+M	drivers/power/supply/qcom/qpnp-qg.c
+
+
+Fri Mar 10 18:36:28 2023 +0800
+M	drivers/power/supply/qcom/qpnp-qg.c
+
+
+Fri Mar 10 18:57:54 2023 +0800
+M	drivers/power/supply/qcom/smb5-lib.c
+
+
+Fri Mar 10 20:53:38 2023 +0800
+M	drivers/power/supply/qcom/qg-soc.c
+M	drivers/power/supply/qcom/qpnp-qg.c
+
+
+Mon Mar 6 21:17:10 2023 +0800
+M	drivers/power/supply/qcom/smb5-lib.c
+
+
+Tue Feb 14 17:57:12 2023 +0800
+M	drivers/power/supply/qcom/qpnp-smb5.c
+M	drivers/power/supply/qcom/smb5-lib.c
+
+
+Sat Mar 4 15:22:33 2023 +0800
+M	drivers/power/supply/qcom/qpnp-smb5.c
+M	drivers/power/supply/qcom/smb5-lib.c
+
+
+Thu Feb 9 15:29:37 2023 +0800
+M	drivers/misc/hqhardwareinfo/extcon-hub-gpio.c
+
+
+Thu Feb 9 19:46:35 2023 +0800
+M	drivers/clk/qcom/gcc-khaje.c
+
+
+Mon Feb 6 14:13:06 2023 +0800
+M	drivers/input/touchscreen/focaltech_touch/focaltech_config.h
+A	drivers/input/touchscreen/focaltech_touch/include/firmware/FT8201AB_V08_D00_BOE_7P95_MODULE_LONG_V_MODE_20230206_all.bin
+A	drivers/input/touchscreen/focaltech_touch/include/firmware/FT8201AB_V08_D00_BOE_7P95_MODULE_LONG_V_MODE_20230206_all.i
+A	drivers/input/touchscreen/focaltech_touch/include/firmware/FT8201AB_V08_D00_BOE_7P95_MODULE_LONG_V_MODE_20230206_app.bin
+A	drivers/input/touchscreen/focaltech_touch/include/firmware/FT8201AB_V08_D00_BOE_7P95_MODULE_LONG_V_MODE_20230206_app.i
+
+
+Wed Jan 18 13:53:14 2023 +0800
+M	drivers/misc/hqhardwareinfo/Makefile
+M	drivers/misc/hqhardwareinfo/extcon-hub-gpio.c
+
+
+Sun Feb 19 21:27:49 2023 +0800
+M	drivers/power/supply/qcom/qg-soc.c
+M	drivers/power/supply/qcom/qpnp-qg.c
+
+
+Thu Feb 9 19:56:23 2023 +0800
+M	drivers/power/supply/qcom/qpnp-qg.c
+
+
+Wed Feb 1 10:30:58 2023 +0800
+M	drivers/input/touchscreen/focaltech_touch/focaltech_config.h
+A	drivers/input/touchscreen/focaltech_touch/include/firmware/FT8201AB_V07_D00_BOE_7P95_MODULE_LONG_V_MODE_20230131_all.bin
+A	drivers/input/touchscreen/focaltech_touch/include/firmware/FT8201AB_V07_D00_BOE_7P95_MODULE_LONG_V_MODE_20230131_all.i
+A	drivers/input/touchscreen/focaltech_touch/include/firmware/FT8201AB_V07_D00_BOE_7P95_MODULE_LONG_V_MODE_20230131_app.bin
+A	drivers/input/touchscreen/focaltech_touch/include/firmware/FT8201AB_V07_D00_BOE_7P95_MODULE_LONG_V_MODE_20230131_app.i
+
+
+Mon Jan 30 18:07:02 2023 +0800
+M	drivers/misc/hqhardwareinfo/extcon-hub-gpio.c
+
+
+Tue Jan 17 11:32:50 2023 +0800
+M	drivers/power/supply/qcom/Makefile
+M	drivers/power/supply/qcom/smb5-lib.c
+
+
+Thu Jan 19 12:11:29 2023 +0800
+M	drivers/power/supply/qcom/smb5-lib.c
+
+
+Wed Feb 8 14:55:52 2023 +0800
+M	drivers/power/supply/qcom/smb5-lib.c
+M	drivers/power/supply/qcom/smb5-reg.h
+M	include/uapi/linux/input-event-codes.h
+
+
+Tue Feb 7 11:09:42 2023 +0800
+M	drivers/power/supply/qcom/smb5-lib.c
+M	include/uapi/linux/input-event-codes.h
+
+
+Thu Jan 12 15:29:40 2023 +0800
+M	drivers/misc/hqhardwareinfo/extcon-hub-gpio.c
+
+
+Sat Jan 14 19:27:55 2023 +0800
+M	drivers/misc/hqhardwareinfo/extcon-hub-gpio.c
+
+
+Wed Feb 1 15:42:09 2023 +0800
+M	drivers/power/supply/qcom/qg-core.h
+M	drivers/power/supply/qcom/qpnp-qg.c
+M	include/uapi/linux/input-event-codes.h
+
+
+Wed Feb 1 10:54:57 2023 +0800
+M	drivers/power/supply/qcom/smb5-lib.c
+M	drivers/power/supply/qcom/smb5-lib.h
+M	include/uapi/linux/input-event-codes.h
+
+
+Thu Jan 12 17:26:32 2023 +0800
+M	drivers/usb/dwc3/dwc3-msm-core.c
+
+
+Fri Jan 13 14:25:40 2023 +0800
+M	drivers/power/supply/qcom/smb5-lib.c
+
+
+Tue Jan 3 18:10:13 2023 +0800
+M	drivers/usb/pd/qpnp-pdphy.c
+
+
+Mon Jan 9 16:28:57 2023 +0800
+M	drivers/misc/hqhardwareinfo/extcon-hub-gpio.c
+
+
+Tue Jan 3 17:17:23 2023 +0800
+M	drivers/extcon/Kconfig
+M	drivers/extcon/Makefile
+M	drivers/misc/hqhardwareinfo/Kconfig
+M	drivers/misc/hqhardwareinfo/Makefile
+R095	drivers/extcon/extcon-hub-gpio.c	drivers/misc/hqhardwareinfo/extcon-hub-gpio.c
+M	drivers/power/supply/qcom/smb5-lib.c
+
+
+Tue Dec 27 09:52:00 2022 +0800
+M	drivers/power/supply/qcom/qpnp-smb5.c
+M	drivers/power/supply/qcom/smb5-iio.c
+M	drivers/power/supply/qcom/smb5-lib.c
+
+
+Mon Dec 19 11:32:13 2022 +0800
+M	drivers/input/touchscreen/focaltech_touch/focaltech_config.h
+A	drivers/input/touchscreen/focaltech_touch/include/firmware/FT8201AB_V06_D00_BOE_7P95_MODULE_LONG_V_MODE_20221212_all.bin
+A	drivers/input/touchscreen/focaltech_touch/include/firmware/FT8201AB_V06_D00_BOE_7P95_MODULE_LONG_V_MODE_20221212_all.i
+A	drivers/input/touchscreen/focaltech_touch/include/firmware/FT8201AB_V06_D00_BOE_7P95_MODULE_LONG_V_MODE_20221212_app.bin
+A	drivers/input/touchscreen/focaltech_touch/include/firmware/FT8201AB_V06_D00_BOE_7P95_MODULE_LONG_V_MODE_20221212_app.i
+
+
+Fri Dec 16 17:11:21 2022 +0800
+M	drivers/input/touchscreen/focaltech_touch/focaltech_core.c
+
+
+Tue Dec 13 16:58:59 2022 +0800
+M	drivers/misc/hqhardwareinfo/hardware_info.c
+
+
+Wed Dec 28 23:01:50 2022 +0800
+M	drivers/power/supply/qcom/battery.c
+M	drivers/power/supply/qcom/smb5-iio.h
+M	drivers/power/supply/qcom/smb5-lib.c
+
+
+Sat Dec 10 14:33:34 2022 +0800
+M	arch/arm64/configs/vendor/bengal_GKI.config
+
+
+Sat Dec 24 19:22:43 2022 +0800
+M	drivers/power/supply/qcom/smb5-lib.c
+
+
+Fri Dec 9 11:13:33 2022 +0800
+M	drivers/input/touchscreen/focaltech_touch/focaltech_core.c
+
+
+Tue Dec 6 12:00:31 2022 +0800
+M	drivers/power/supply/qcom/qg-defs.h
+M	drivers/power/supply/qcom/qpnp-qg.c
+M	drivers/power/supply/qcom/qpnp-smb5.c
+M	drivers/power/supply/qcom/smb5-lib.c
+M	drivers/usb/pd/policy_engine.c
+M	drivers/usb/pd/qpnp-pdphy.c
+
+
+Wed Dec 21 18:36:49 2022 +0800
+M	drivers/power/supply/qcom/smb5-lib.c
+
+
+Fri Nov 18 16:06:48 2022 +0800
+M	drivers/input/touchscreen/focaltech_touch/focaltech_core.c
+M	drivers/input/touchscreen/focaltech_touch/focaltech_core.h
+M	drivers/power/supply/qcom/smb5-lib.c
+
+
+Mon Nov 28 20:47:53 2022 +0800
+M	drivers/extcon/extcon-hub-gpio.c
+
+
+Mon Nov 28 16:23:15 2022 +0800
+M	drivers/extcon/extcon-hub-gpio.c
+
+
+Tue Nov 29 22:42:17 2022 +0800
+M	drivers/power/supply/qcom/qg-soc.c
+
+
+Tue Nov 29 20:02:37 2022 +0800
+M	drivers/power/supply/qcom/smb5-lib.c
+
+
+Tue Nov 29 15:12:34 2022 +0800
+M	drivers/power/supply/qcom/qpnp-smb5.c
+
+
+Mon Nov 28 11:19:58 2022 +0800
+M	drivers/input/touchscreen/focaltech_touch/focaltech_config.h
+A	drivers/input/touchscreen/focaltech_touch/include/firmware/FT8201AB_V05_D00_BOE_7P95_MODULE_LONG_V_MODE_20221128_all.bin
+A	drivers/input/touchscreen/focaltech_touch/include/firmware/FT8201AB_V05_D00_BOE_7P95_MODULE_LONG_V_MODE_20221128_all.i
+A	drivers/input/touchscreen/focaltech_touch/include/firmware/FT8201AB_V05_D00_BOE_7P95_MODULE_LONG_V_MODE_20221128_app.bin
+A	drivers/input/touchscreen/focaltech_touch/include/firmware/FT8201AB_V05_D00_BOE_7P95_MODULE_LONG_V_MODE_20221128_app.i
+
+
+Thu Nov 24 23:38:04 2022 +0800
+M	drivers/power/supply/qcom/smb5-lib.c
+M	drivers/power/supply/qcom/smb5-lib.h
+
+
+Tue Nov 22 16:13:33 2022 +0800
+M	drivers/extcon/extcon-hub-gpio.c
+M	drivers/usb/dwc3/dwc3-msm-core.c
+
+
+Mon Nov 21 16:53:43 2022 +0800
+M	drivers/input/touchscreen/focaltech_touch/focaltech_flash.c
+M	drivers/input/touchscreen/focaltech_touch/focaltech_test.c
+M	drivers/input/touchscreen/focaltech_touch/focaltech_test_ini.c
+
+
+Mon Nov 21 19:32:03 2022 +0800
+M	drivers/power/supply/qcom/smb5-lib.c
+
+
+Sat Nov 19 17:33:19 2022 +0800
+M	drivers/misc/hqhardwareinfo/hardware_info.c
+M	include/linux/hardware_info.h
+
+
+Fri Nov 18 20:26:04 2022 +0800
+M	drivers/power/supply/qcom/qg-soc.c
+
+
+Fri Nov 18 19:18:26 2022 +0800
+M	drivers/input/touchscreen/focaltech_touch/focaltech_flash.c
+M	drivers/input/touchscreen/focaltech_touch/focaltech_test.c
+M	drivers/input/touchscreen/focaltech_touch/focaltech_test_ini.c
+
+
+Fri Dec 2 15:03:45 2022 +0800
+M	drivers/power/supply/qcom/smb5-lib.c
+
+
+Tue Nov 15 19:14:01 2022 +0800
+M	drivers/power/supply/qcom/smb5-lib.c
+
+
+Tue Nov 8 14:08:11 2022 +0800
+M	drivers/extcon/extcon-hub-gpio.c
+
+
+Wed Nov 2 16:11:50 2022 +0800
+M	drivers/extcon/extcon-hub-gpio.c
+M	include/uapi/linux/input-event-codes.h
+
+
+Sat Nov 26 20:54:33 2022 +0800
+M	drivers/power/supply/qcom/smb5-lib.c
+M	drivers/power/supply/qcom/smb5-lib.h
+
+
+Tue Nov 1 11:16:27 2022 +0800
+M	drivers/extcon/extcon-hub-gpio.c
+
+
+Mon Oct 24 21:10:33 2022 +0800
+M	drivers/input/touchscreen/focaltech_touch/focaltech_core.c
+M	drivers/input/touchscreen/focaltech_touch/focaltech_core.h
+
+
+Thu Oct 27 09:42:40 2022 +0800
+M	drivers/usb/dwc3/dwc3-msm-core.c
+
+
+Tue Oct 25 11:02:47 2022 +0800
+M	arch/arm64/configs/vendor/bengal_GKI.config
+M	drivers/extcon/Kconfig
+M	drivers/extcon/Makefile
+R099	drivers/power/supply/qcom/qpnp-smb5-usb.c	drivers/extcon/extcon-hub-gpio.c
+M	drivers/power/supply/qcom/Makefile
+
+
+Sun Oct 23 20:02:15 2022 +0800
+MM	arch/arm64/configs/vendor/bengal_GKI.config
+
+
+Wed Oct 12 01:29:41 2022 +0800
+M	drivers/power/supply/qcom/qpnp-smb5-usb.c
+
+
+Fri Oct 21 15:27:28 2022 +0800
+MM	drivers/power/supply/qcom/qpnp-qg.c
+
+
+Fri Oct 21 15:10:45 2022 +0800
+MM	drivers/usb/core/hub.c
+
+
+Thu Oct 20 23:57:13 2022 +0800
+M	drivers/power/supply/qcom/qg-soc.c
+M	drivers/power/supply/qcom/qpnp-qg.c
+
+
+Sat Oct 15 13:20:30 2022 +0800
+M	drivers/power/supply/qcom/qpnp-qg.c
+
+
+Wed Oct 19 15:59:49 2022 +0800
+M	arch/arm64/configs/vendor/bengal_GKI.config
+
+
+Mon Oct 17 22:14:57 2022 +0800
+M	arch/arm64/configs/vendor/bengal_GKI.config
+
+
+Mon Oct 17 14:16:02 2022 +0800
+M	drivers/usb/core/hub.c
+
+
+Wed Oct 12 16:18:11 2022 +0800
+M	drivers/misc/sx937x/sx937x_sar.c
+
+
+Sat Oct 15 17:25:48 2022 +0800
+M	drivers/power/supply/qcom/qpnp-smb5-usb.c
+
+
+Sat Oct 15 19:23:46 2022 +0800
+MM	drivers/power/supply/qcom/qpnp-smb5-usb.c
+
+
+Sat Oct 15 17:15:58 2022 +0800
+M	arch/arm64/configs/vendor/bengal_GKI.config
+M	drivers/leds/Kconfig
+M	drivers/leds/Makefile
+
+
+Sat Oct 15 15:52:51 2022 +0800
+M	drivers/power/supply/qcom/qpnp-smb5-usb.c
+
+
+Thu Oct 13 19:04:13 2022 +0800
+M	drivers/power/supply/qcom/qpnp-smb5-usb.c
+
+
+Sat Oct 8 15:29:19 2022 +0800
+M	drivers/input/touchscreen/focaltech_touch/focaltech_config.h
+
+
+Wed Oct 12 09:36:08 2022 +0800
+MM	arch/arm64/configs/vendor/bengal_GKI.config
+
+
+Tue Oct 11 15:25:10 2022 +0800
+M	arch/arm64/configs/vendor/bengal_GKI.config
+M	drivers/input/misc/Kconfig
+M	drivers/input/misc/Makefile
+A	drivers/input/misc/qpnp-power-on.c
+M	drivers/power/reset/Kconfig
+M	drivers/power/reset/msm-poweroff.c
+A	include/linux/input/qpnp-power-on.h
+A	include/soc/qcom/restart.h
+
+
+Tue Oct 11 21:12:47 2022 +0800
+M	drivers/thermal/qcom/qcom-spmi-adc-tm5.c
+
+
+Tue Oct 11 11:12:55 2022 +0800
+MM	arch/arm64/configs/vendor/bengal_GKI.config
+
+
+Mon Oct 10 22:02:39 2022 +0800
+MM	arch/arm64/configs/vendor/bengal_GKI.config
+
+
+Mon Oct 10 21:32:22 2022 +0800
+MM	arch/arm64/configs/vendor/bengal_GKI.config
+
+
+Mon Oct 10 10:47:56 2022 +0800
+M	arch/arm64/configs/vendor/bengal_GKI.config
+
+
+Sat Oct 8 21:13:42 2022 +0800
+M	arch/arm64/configs/vendor/bengal_GKI.config
+M	drivers/scsi/ufs/ufs-qcom.c
+
+
+Mon Oct 10 16:29:13 2022 +0800
+M	drivers/power/supply/qcom/qpnp-smb5-usb.c
+
+
+Mon Oct 10 15:23:05 2022 +0800
+M	arch/arm64/configs/vendor/bengal_GKI.config
+
+
+Mon Oct 10 14:11:28 2022 +0800
+M	drivers/leds/leds_aw210xx.c
+
+
+Fri Sep 30 11:25:14 2022 +0800
+M	drivers/input/touchscreen/focaltech_touch/focaltech_ex_fun.c
+M	drivers/input/touchscreen/focaltech_touch/focaltech_test.c
+
+
+Sun Oct 9 22:33:58 2022 +0800
+M	drivers/usb/core/hub.c
+
+
+Sun Oct 9 22:18:20 2022 +0800
+M	drivers/usb/core/hub.c
+
+
+Sun Oct 9 18:13:37 2022 +0800
+M	arch/arm64/configs/vendor/bengal_GKI.config
+M	arch/arm64/configs/vendor/bengal_consolidate.config
+
+
+Sat Oct 8 18:00:27 2022 +0800
+M	drivers/leds/leds_aw210xx.c
+
+
+Sat Oct 8 11:22:18 2022 +0800
+M	drivers/misc/sx937x/sx937x_sar.c
+
+
+Sat Oct 8 20:22:51 2022 +0800
+M	drivers/power/supply/qcom/qpnp-smb5.c
+
+
+Sat Oct 8 16:56:57 2022 +0800
+M	drivers/power/supply/qcom/qpnp-smb5-usb.c
+
+
+Tue Oct 4 20:00:50 2022 +0800
+M	drivers/leds/leds_aw210xx.c
+
+
+Tue Oct 4 17:55:25 2022 +0800
+M	arch/arm64/configs/vendor/bengal_GKI.config
+
+
+Mon Oct 3 16:18:38 2022 +0800
+M	drivers/leds/leds_aw210xx.c
+
+
+Sun Oct 2 17:45:47 2022 +0800
+M	drivers/power/supply/qcom/qpnp-smb5.c
+
+
+Mon Oct 3 10:15:34 2022 +0800
+M	drivers/misc/sx937x/sx937x_sar.c
+
+
+Sun Oct 2 11:08:08 2022 +0800
+M	drivers/power/supply/qcom/qg-soc.c
+M	drivers/power/supply/qcom/qpnp-qg.c
+M	drivers/power/supply/qcom/qpnp-smb5.c
+
+
+Sat Oct 1 15:49:19 2022 +0800
+M	drivers/power/supply/qcom/qpnp-qg.c
+M	drivers/power/supply/qcom/qpnp-smb5.c
+
+
+Fri Sep 30 15:57:01 2022 +0800
+M	drivers/soc/qcom/socinfo.c
+
+
+Thu Sep 29 20:43:58 2022 +0800
+M	drivers/pinctrl/qcom/pinctrl-khaje.c
+M	drivers/power/supply/qcom/qpnp-smb5-usb.c
+
+
+Fri Sep 30 13:21:39 2022 +0800
+M	drivers/power/supply/qcom/battery.c
+M	drivers/power/supply/qcom/smb5-lib.c
+
+
+Thu Sep 29 19:36:23 2022 +0800
+MM	drivers/input/touchscreen/focaltech_touch/focaltech_config.h
+
+
+Wed Sep 28 18:16:20 2022 +0800
+M	drivers/input/touchscreen/focaltech_touch/focaltech_config.h
+M	drivers/input/touchscreen/focaltech_touch/focaltech_ex_fun.c
+M	drivers/input/touchscreen/focaltech_touch/focaltech_flash.c
+M	drivers/input/touchscreen/focaltech_touch/focaltech_test.c
+M	drivers/input/touchscreen/focaltech_touch/focaltech_test.h
+M	drivers/input/touchscreen/focaltech_touch/focaltech_test_ini.c
+
+
+Mon Sep 26 11:08:15 2022 +0800
+M	drivers/input/touchscreen/focaltech_touch/focaltech_config.h
+
+
+Thu Sep 29 16:49:23 2022 +0800
+M	drivers/pinctrl/qcom/pinctrl-khaje.c
+
+
+Thu Sep 22 20:49:19 2022 +0800
+M	arch/arm64/configs/vendor/bengal_GKI.config
+M	drivers/leds/Kconfig
+M	drivers/leds/Makefile
+A	drivers/leds/leds_aw210xx.c
+A	drivers/leds/leds_aw210xx.h
+A	drivers/leds/leds_aw210xx_reg.h
+
+
+Wed Sep 21 11:04:46 2022 +0800
+M	arch/arm64/configs/vendor/bengal_GKI.config
+M	drivers/power/supply/qcom/qpnp-smb5-usb.c
+
+
+Wed Sep 21 21:23:15 2022 +0800
+M	drivers/misc/hqhardwareinfo/hardware_info.c
+M	include/linux/hardware_info.h
+
+
+Tue Sep 20 15:12:39 2022 +0800
+M	drivers/power/supply/qcom/smb5-lib.c
+
+
+Thu Sep 22 10:29:04 2022 +0800
+M	drivers/usb/pd/policy_engine.c
+
+
+Tue Sep 20 17:25:32 2022 +0800
+MM	arch/arm64/configs/vendor/bengal_GKI.config
+
+
+Tue Sep 20 09:58:49 2022 +0800
+M	drivers/iio/adc/qcom-vadc-common.c
+M	drivers/power/supply/qcom/qpnp-smb5.c
+
+
+Mon Sep 19 22:31:55 2022 +0800
+M	drivers/power/supply/qcom/qpnp-smb5-usb.c
+M	drivers/power/supply/qcom/smb5-lib.c
+
+
+Fri Sep 16 23:17:13 2022 +0800
+M	arch/arm64/configs/vendor/bengal_GKI.config
+M	drivers/input/touchscreen/Kconfig
+M	drivers/input/touchscreen/Makefile
+A	drivers/input/touchscreen/focaltech_touch/Conf_MultipleTest.ini
+A	drivers/input/touchscreen/focaltech_touch/Kconfig
+A	drivers/input/touchscreen/focaltech_touch/Makefile
+A	drivers/input/touchscreen/focaltech_touch/focaltech_common.h
+A	drivers/input/touchscreen/focaltech_touch/focaltech_config.h
+A	drivers/input/touchscreen/focaltech_touch/focaltech_core.c
+A	drivers/input/touchscreen/focaltech_touch/focaltech_core.h
+A	drivers/input/touchscreen/focaltech_touch/focaltech_esdcheck.c
+A	drivers/input/touchscreen/focaltech_touch/focaltech_ex_fun.c
+A	drivers/input/touchscreen/focaltech_touch/focaltech_ex_mode.c
+A	drivers/input/touchscreen/focaltech_touch/focaltech_flash.c
+A	drivers/input/touchscreen/focaltech_touch/focaltech_flash.h
+A	drivers/input/touchscreen/focaltech_touch/focaltech_gesture.c
+A	drivers/input/touchscreen/focaltech_touch/focaltech_i2c.c
+A	drivers/input/touchscreen/focaltech_touch/focaltech_point_report_check.c
+A	drivers/input/touchscreen/focaltech_touch/focaltech_test.c
+A	drivers/input/touchscreen/focaltech_touch/focaltech_test.h
+A	drivers/input/touchscreen/focaltech_touch/focaltech_test_ft8201ab.c
+A	drivers/input/touchscreen/focaltech_touch/focaltech_test_ini.c
+A	drivers/input/touchscreen/focaltech_touch/focaltech_test_ini.h
+A	drivers/input/touchscreen/focaltech_touch/focaltech_upgrade_ft8201ab.c
+A	drivers/input/touchscreen/focaltech_touch/include/firmware/FT8201AB_V02_D00_BOE_7P95_MODULE_LONG_V_MODE_20220824_all.bin
+A	drivers/input/touchscreen/focaltech_touch/include/firmware/FT8201AB_V02_D00_BOE_7P95_MODULE_LONG_V_MODE_20220824_all.i
+A	drivers/input/touchscreen/focaltech_touch/include/firmware/FT8201AB_V02_D00_BOE_7P95_MODULE_LONG_V_MODE_20220824_app.bin
+A	drivers/input/touchscreen/focaltech_touch/include/firmware/FT8201AB_V02_D00_BOE_7P95_MODULE_LONG_V_MODE_20220824_app.i
+A	drivers/input/touchscreen/focaltech_touch/include/firmware/fw_sample.i
+A	drivers/input/touchscreen/focaltech_touch/include/pramboot/FT8201AB_Pramboot_V2.0_20210913.i
+
+
+Mon Sep 19 18:08:43 2022 +0800
+M	drivers/power/supply/qcom/qpnp-smb5.c
+
+
+Mon Sep 19 15:27:41 2022 +0800
+M	arch/arm64/configs/vendor/bengal_GKI.config
+M	arch/arm64/configs/vendor/bengal_consolidate.config
+M	drivers/misc/Kconfig
+M	drivers/misc/Makefile
+A	drivers/misc/sx937x/Kconfig
+A	drivers/misc/sx937x/Makefile
+A	drivers/misc/sx937x/sx937x.h
+A	drivers/misc/sx937x/sx937x_sar.c
+M	drivers/pinctrl/qcom/pinctrl-khaje.c
+
+
+Thu Sep 15 09:49:39 2022 +0800
+M	drivers/pinctrl/qcom/pinctrl-khaje.c
+M	drivers/power/supply/qcom/Makefile
+A	drivers/power/supply/qcom/qpnp-smb5-usb.c
+M	drivers/usb/core/hub.c
+M	drivers/usb/dwc3/dwc3-msm-core.c
+M	include/linux/hid.h
+
+
+Wed Sep 14 23:44:50 2022 +0800
+M	arch/arm64/configs/vendor/bengal_GKI.config
+M	drivers/misc/Kconfig
+M	drivers/misc/Makefile
+A	drivers/misc/hqhardwareinfo/Kconfig
+A	drivers/misc/hqhardwareinfo/Makefile
+A	drivers/misc/hqhardwareinfo/hardware_info.c
+A	include/linux/hardware_info.h
+
+
+Sat Sep 10 09:20:00 2022 +0800
+M	drivers/hid/hid-playstation.c
+M	drivers/hid/hidraw.c
+
+===========================================================================
+project_path: target/vendor/qcom/opensource/audio-kernel
+Thu Oct 19 12:17:28 2023 +0800
+M	asoc/codecs/wcd-mbhc-adc.c
+M	asoc/codecs/wcd-mbhc-v2.c
+M	include/asoc/wcd-mbhc-v2.h
+
+
+Sat Sep 23 18:04:16 2023 +0800
+M	asoc/codecs/wcd-mbhc-adc.c
+M	asoc/codecs/wcd-mbhc-v2.c
+M	include/asoc/wcd-mbhc-v2.h
+
+
+Thu Aug 31 17:43:05 2023 +0800
+M	asoc/codecs/wcd-mbhc-v2.c
+M	asoc/codecs/wcd937x/wcd937x-mbhc.c
+M	include/asoc/wcd-mbhc-v2.h
+
+
+Mon Aug 7 11:10:04 2023 +0800
+M	asoc/codecs/wcd-mbhc-v2.c
+M	include/asoc/wcd-mbhc-v2.h
+
+
+Tue Jul 25 17:16:23 2023 +0800
+M	asoc/codecs/wcd-mbhc-v2.c
+M	include/asoc/wcd-mbhc-v2.h
+
+
+Sat Jul 22 10:57:55 2023 +0800
+M	asoc/codecs/wcd-mbhc-v2.c
+M	include/asoc/wcd-mbhc-v2.h
+
+
+Sat Jul 22 10:47:13 2023 +0800
+M	asoc/codecs/wcd-mbhc-v2.c
+M	asoc/codecs/wcd937x/wcd937x-mbhc.c
+M	include/asoc/wcd-mbhc-v2.h
+
+
+Thu Mar 9 16:17:50 2023 +0800
+M	asoc/bengal.c
+M	asoc/codecs/wcd937x/wcd937x.c
+
+
+Mon Jan 30 15:33:04 2023 +0800
+M	asoc/bengal.c
+
+
+Wed Jan 4 16:09:24 2023 +0800
+M	asoc/bengal.c
+
+
+Fri Dec 16 19:19:52 2022 +0800
+M	asoc/msm-audio-defs.h
+M	asoc/msm_common.c
+M	config/bengalauto.conf
+M	config/bengalautoconf.h
+
+
+Tue Dec 13 15:25:36 2022 +0800
+M	asoc/bengal.c
+
+
+Thu Dec 1 15:23:04 2022 +0800
+M	asoc/bengal.c
+
+
+Tue Nov 29 15:50:15 2022 +0800
+M	asoc/bengal.c
+
+
+Mon Nov 21 21:07:01 2022 +0800
+M	asoc/codecs/wcd937x/wcd937x-mbhc.c
+
+
+Sat Nov 12 15:16:55 2022 +0800
+M	asoc/codecs/wcd937x/wcd937x-mbhc.c
+
+
+Thu Oct 27 17:43:57 2022 +0800
+M	asoc/msm_bengal_dailink.h
+
+
+Tue Oct 11 14:45:00 2022 +0800
+M	asoc/bengal-port-config.h
+
+
+Mon Oct 3 22:59:09 2022 +0800
+M	Android.mk
+M	Kbuild
+M	Makefile.am
+M	asoc/codecs/Kbuild
+A	asoc/codecs/aw882xx/Kbuild
+A	asoc/codecs/aw882xx/Makefile
+A	asoc/codecs/aw882xx/aw882xx.c
+A	asoc/codecs/aw882xx/aw882xx.h
+A	asoc/codecs/aw882xx/aw882xx_bin_parse.c
+A	asoc/codecs/aw882xx/aw882xx_bin_parse.h
+A	asoc/codecs/aw882xx/aw882xx_calib.c
+A	asoc/codecs/aw882xx/aw882xx_calib.h
+A	asoc/codecs/aw882xx/aw882xx_data_type.h
+A	asoc/codecs/aw882xx/aw882xx_device.c
+A	asoc/codecs/aw882xx/aw882xx_device.h
+A	asoc/codecs/aw882xx/aw882xx_dsp.c
+A	asoc/codecs/aw882xx/aw882xx_dsp.h
+A	asoc/codecs/aw882xx/aw882xx_init.c
+A	asoc/codecs/aw882xx/aw882xx_log.h
+A	asoc/codecs/aw882xx/aw882xx_monitor.c
+A	asoc/codecs/aw882xx/aw882xx_monitor.h
+A	asoc/codecs/aw882xx/aw882xx_pid_1852_reg.h
+A	asoc/codecs/aw882xx/aw882xx_pid_2013_reg.h
+A	asoc/codecs/aw882xx/aw882xx_pid_2032_reg.h
+A	asoc/codecs/aw882xx/aw882xx_pid_2055_reg.h
+A	asoc/codecs/aw882xx/aw882xx_pid_2055a_reg.h
+A	asoc/codecs/aw882xx/aw882xx_pid_2071_reg.h
+A	asoc/codecs/aw882xx/aw882xx_pid_2113_reg.h
+A	asoc/codecs/aw882xx/aw882xx_spin.c
+A	asoc/codecs/aw882xx/aw882xx_spin.h
+M	asoc/msm_bengal_dailink.h
+M	audio_kernel_modules.mk
+M	config/bengalauto.conf
+M	config/bengalautoconf.h
+
+
+Tue Oct 4 11:07:14 2022 +0800
+M	asoc/bengal.c
+
+
+Mon Oct 3 22:13:12 2022 +0800
+M	asoc/codecs/wcd937x/wcd937x.c
+
+
+Mon Oct 3 20:16:18 2022 +0800
+M	Android.mk
+M	asoc/bengal.c
+M	asoc/msm_bengal_dailink.h
+M	soc/pinctrl-lpi.c
+
+===========================================================================
+project_path: target/vendor/qcom/opensource/display-drivers
+Mon Mar 27 11:17:47 2023 +0800
+M	msm/sm5109.c
+
+
+Thu Feb 9 10:26:43 2023 +0800
+M	msm/dsi/dsi_panel.c
+M	msm/msm_drv.c
+M	msm/sm5109.c
+M	msm/sm5109.h
+
+
+Wed Jan 4 16:45:41 2023 +0800
+M	msm/dsi/dsi_panel.c
+M	msm/dsi/dsi_panel.h
+
+
+Tue Jan 17 10:16:07 2023 +0800
+M	msm/dsi/dsi_panel.c
+
+
+Mon Nov 28 15:08:05 2022 +0800
+M	msm/dsi/dsi_panel.c
+
+
+Tue Nov 8 15:52:06 2022 +0800
+M	msm/dsi/dsi_panel.c
+
+
+Thu Nov 17 14:00:42 2022 +0800
+M	msm/dsi/dsi_phy_hw_v5_0.c
+
+
+Fri Oct 28 11:28:08 2022 +0800
+M	msm/dsi/dsi_phy_hw_v4_0.c
+
+
+Thu Oct 13 20:33:14 2022 +0800
+M	msm/dsi/dsi_panel.c
+
+
+Thu Sep 29 17:27:44 2022 +0800
+M	msm/Kbuild
+M	msm/dsi/dsi_panel.c
+M	msm/msm_drv.c
+A	msm/sm5109.c
+A	msm/sm5109.h
+
+
+Fri Sep 9 17:19:03 2022 +0800
+M	msm/dsi/dsi_panel.c
+M	msm/dsi/dsi_panel.h
+
+===========================================================================
+project_path: target/vendor/qcom/opensource/touch-drivers
+Thu Nov 3 10:44:07 2022 +0800
+M	touch_driver_board.mk
+M	touch_driver_product.mk
+
+
+===========================================================================
+project_path: target/vendor/qcom/opensource/graphics-kernel
+Wed May 17 15:32:27 2023 +0800
+M	adreno.h
+M	adreno_a6xx_preempt.c
+M	adreno_gen7.c
+M	adreno_gen7_preempt.c
+M	kgsl.h
+
+
+-------------------------------------------------------------------------------------
+Wed Mar 22 20:09:14 2023 +0800
+M	kgsl_iommu.c
+
+

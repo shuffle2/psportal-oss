@@ -625,6 +625,7 @@ struct wcd_mbhc {
 	struct notifier_block fsa_nb;
 
 	struct extcon_dev *extdev;
+	bool gnd_mic_swaped;
 };
 
 void wcd_mbhc_find_plug_and_report(struct wcd_mbhc *mbhc,
