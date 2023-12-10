@@ -1,0 +1,24 @@
+# SPDX-License-Identifier: GPL-2.0-only
+#
+# HQ_HARDWARE_INFO
+#
+
+config HQ_HARDWARE_INFO
+	tristate "HQ_HARDWARE_INFO Support"
+	default m
+	help
+	  CONFIG_HQ_HARDWARE_INFO
+
+config EXTCON_HUB_GPIO
+	tristate "USB Power Policy Engine"
+	depends on EXTCON
+	depends on TYPEC
+	depends on IIO
+	help
+          Say Y here to enable USB protocol and policy engine.
+	  This driver provides a class that implements the upper
+	  layers of the USB Power Delivery stack. It requires a
+	  PD PHY driver in order to transmit and receive PD
+	  messages on its behalf.
+
+

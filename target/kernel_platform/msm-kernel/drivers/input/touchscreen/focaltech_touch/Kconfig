@@ -1,0 +1,10 @@
+# SPDX-License-Identifier: GPL-2.0-only
+#
+# Touchscreen driver configuration
+#
+
+config TOUCHSCREEN_FTS
+	tristate "focaltech touchscreen support"
+	default m
+	help
+	  Say Y here if you have a touchscreen using Zin bt541
